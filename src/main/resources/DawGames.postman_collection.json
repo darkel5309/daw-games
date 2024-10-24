@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "230cf505-fbc1-45c3-804d-af41ac34b777",
+		"name": "DawGames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35176732"
+	},
+	"item": [
+		{
+			"name": "listar todos los juegos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juego mediante id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear juego ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Valorant\",\r\n    \"genero\": \"Tactical-Shooter\",\r\n    \"compania\": \"Riot Games\",\r\n    \"plataforma\": \"PC, PS5, Xbox Series X/S\",\r\n    \"precio\": 0.00,\r\n    \"descargas\": 13500000,\r\n    \"fechaLanzamiento\": \"2020-06-02T00:00:00\",\r\n    \"tipo\": \"BASE\",\r\n    \"completado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar juego mediante id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"nombre\": \"Elden Ring\",\r\n    \"genero\": \"RPG\",\r\n    \"compania\": \"FromSoftware\",\r\n    \"plataforma\": \"PC, PS4, Xbox One, PS5, Xbox Series X/S\",\r\n    \"precio\": 60.00,\r\n    \"descargas\": 10000000,\r\n    \"fechaLanzamiento\": \"2022-02-25T00:00:00\",\r\n    \"tipo\": \"BASE\",\r\n    \"completado\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrar juego mediante id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completar un juego",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/completar/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"completar",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "descompletar un juego",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/completar/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"completar",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juegos mediante genero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/genero?genero=tactical",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"genero"
+					],
+					"query": [
+						{
+							"key": "genero",
+							"value": "tactical"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juegos mediante nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/nombre?nombre=the",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"nombre"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "the"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juegos mediante plataforma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/plataforma?plataforma=pc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"plataforma"
+					],
+					"query": [
+						{
+							"key": "plataforma",
+							"value": "pc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todas las expansiones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/expansiones",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"expansiones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todos los dlcs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/dlcs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"dlcs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todos los juegos base",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/bases",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"bases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juegos mediante rango de precio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/precio?min=10&max=30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"precio"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "10"
+						},
+						{
+							"key": "max",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener juegos con mas de 1000 descargas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dawgames/api/juegos/mas1000descargas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dawgames",
+						"api",
+						"juegos",
+						"mas1000descargas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
